@@ -241,3 +241,16 @@ h1 {
         transform: translateY(-5%);         
     }
 }
+
+//alterações para celular
+
+.item-contacto {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.item-contacto span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
