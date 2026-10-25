@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
 }
 
 html {
@@ -22,23 +21,24 @@ html {
 body {
     background-color: var(--escuro);
     color: var(--claro);
-
 }
 
 .navegacao {
     position: fixed;
     top: 0;
-    background: rgb(15, 23, 42, 0.8);
+    background: rgb(15, 23, 42, 0.9);
     width: 100%;
     z-index: 100;
-    padding: 1.5rem;
+    padding: 1.2rem;
+    backdrop-filter: blur(10px);
 }
 
 .menu {
     display: flex;
     list-style: none;
-    gap: 3rem;
+    gap: 2rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .link-menu {
@@ -58,7 +58,6 @@ body {
     left: 0;
     background: linear-gradient(90deg, var(--primaria), var(--secundaria));
     transition: width 0.5s ease;
-
 }
 
 .link-menu:hover::after {
@@ -71,57 +70,145 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
+    padding: 0 1rem;
 }
 
 .foto-perfil {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
     border: 4px solid var(--vidro);
     animation: flutuar 6s ease-in-out infinite;
+    object-fit: cover;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--primaria);
     font-weight: bold;
     margin-top: 20px;
 }
 
 .cabecalho-sub-titulo {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--claro);
 }
 
 .sobre-mim {
     padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .sobre-titulo {
     font-size: 2.3rem;
     color: var(--claro);
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.sobre-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .sobre-conteudo {
     padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
     border-radius: 16px;
     border: 1px solid var(--vidro);
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.sobre-conteudo:hover {
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.15);
+    transform: translateY(-5px);
 }
 
 .sobre-paragrafo {
     text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+
+/* Estilos Secção Interesses */
+.interesses-icones {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+}
+
+.interesse-card {
+    background: linear-gradient(135deg, var(--primaria), var(--secundaria));
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
     font-size: 1.5rem;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+}
+
+.interesse-card span {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Estilos de Skills / Habilidades */
+.skills-container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-categoria-titulo {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--primaria);
+}
+
+.skill-item {
+    margin-bottom: 1.2rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.barra-fundo {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.barra-progresso {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    border-radius: 4px;
 }
 
 .projecto {
     padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .projecto-titulo {
@@ -130,14 +217,10 @@ h1 {
     margin-bottom: 2.5rem;
 }
 
-
-
 .projecto-caixa {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .projecto-card {
@@ -146,12 +229,12 @@ h1 {
     backdrop-filter: blur(10px);
     border: 1px solid var(--vidro);
     overflow: hidden;
+    transition: all 0.5s ease;
 }
 
 .projecto-card:hover {
-    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
-    transform: translateY(-10px) scale(1.03);
-    transition: all 0.5s ease;
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+    transform: translateY(-10px) scale(1.02);
     cursor: pointer;
 }
 
@@ -163,17 +246,18 @@ h1 {
 
 .info-projecto {
     margin-bottom: 5px;
+    font-size: 1.2rem;
 }
 
 .paragrafo-projecto {
     color: rgba(226, 232, 240, 0.8);
-    line-height: 1.3rem;
+    font-size: 0.95rem;
+    line-height: 1.4rem;
 }
 
 .caixa-textos-projecto {
     padding: 1.5rem;
 }
-
 
 .contactos {
     padding: 6rem 2rem;
@@ -186,10 +270,9 @@ h1 {
     margin-bottom: 2.5rem;
     text-align: center;
     color: var(--claro);
-    letter-spacing: 1px;
 }
 
-.contactos-container{
+.contactos-container {
     padding: 3rem 2rem;
     width: 100%;
     max-width: 500px;
@@ -199,23 +282,31 @@ h1 {
     border: 1px solid var(--vidro);
 }
 
-.info-contactos-lista{
+.info-contactos-lista {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
 }
 
-.item-contacto{
+.item-contacto {
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: var(--claro);
+    min-width: 0;
+    max-width: 100%;
 }
 
-.icone-contacto{
-    color: var(--claro);
-    font-size: 1.4rem;
+.item-contacto span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.icone-contacto {
+    color: var(--primaria);
+    font-size: 1.3rem;
 }
 
 .particulas {
@@ -233,24 +324,28 @@ h1 {
 }
 
 @keyframes flutuar {
-    0%, 100%{
+    0%, 100% {
         transform: translateY(0);
     }
-
-    50%{
-        transform: translateY(-5%);         
+    50% {
+        transform: translateY(-5%);        
     }
 }
 
-alterações para celular
 
-.item-contacto {
-    min-width: 0;
-    max-width: 100%;
-}
 
-.item-contacto span {
-    min-width: 0;
-    overflow-wrap: anywhere;
-    word-break: break-word;
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .cabecalho-sub-titulo {
+        font-size: 1.2rem;
+    }
+    .menu {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+    .navegacao {
+        padding: 0.8rem;
+    }
 }
