@@ -6,48 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Portifolio Kelven</title>
+    <title>Portfolio Kelven</title>
 </head>
 
 <body>
 
     <div class="particulas"></div>
 
-
     <nav class="navegacao">
         <ul class="menu">
             <li>
                 <a class="link-menu" href="#pagina-inicial">Página Inicial</a>
             </li>
-
             <li>
                 <a class="link-menu" href="#sobre-mim">Sobre Mim</a>
             </li>
-
+            <li>
+                <a class="link-menu" href="#habilidades">Habilidades</a>
+            </li>
             <li>
                 <a class="link-menu" href="#projectos">Projectos</a>
             </li>
-
             <li>
                 <a class="link-menu" href="#contactos">Contactos</a>
             </li>
         </ul>
-
     </nav>
 
     <main id="pagina-inicial" class="cabecalho">
-
-        <img src="Kelven Screenshot 2026-10-14 162951.png" alt="Foto de Kelven" class="foto-perfil">
+        <img src="img/Kelven Screenshot 2026-10-14 162951.png" alt="Foto de Kelven" class="foto-perfil">
         <h1>Kelven Francisco da Costa Gemicene</h1>
         <p class="cabecalho-sub-titulo">Desenvolvedor Junior de páginas Web</p>
     </main>
 
     <section id="sobre-mim" class="sobre-mim">
         <h2 class="sobre-titulo">Sobre Mim</h2>
-        <div class="sobre-conteudo">
-            <p class="sobre-paragrafo">Olá, meu nome é Kelven Francisco da Costa Gemicene e sou um desenvolvedor web
-                júnior. Estou a dar os meus primeiros passos no mundo da programação e tenho muito entusiasmo para
-                aprender todos os dias.<b> Tenho conhecimentos básicos de HTML e CSS</b>, que utilizo para estruturar e estilizar páginas web. Tenho interesse em aprender JavaScript e outras tecnologias para desenvolver projectos cada vez mais completos.</p>
+        <div class="sobre-grid-container">
+
+
+            <div class="sobre-conteudo">
+                <h3 class="info-projecto" style="font-size: 1.8rem; color: var(--primaria); margin-bottom: 1rem;">Kelven
+                    Francisco da Costa Gemicene</h3>
+                <p class="sobre-paragrafo" style="margin-bottom: 1rem;">
+                    Sou um desenvolvedor web júnior. Estou a dar os meus primeiros passos no mundo da programação e
+                    tenho muito entusiasmo para aprender todos os dias.
+                </p>
+            </div>
+
+            <div class="sobre-conteudo interesses-caixa">
+                <h3 class="info-projecto" style="font-size: 1.8rem; margin-bottom: 1.5rem;">Meus Interesses</h3>
+                <div class="interesses-icones">
+                    <div class="interesse-card">
+                        <i class="fa-regular fa-futbol"> <span>Futebol</span></i>
+                    </div>
+                    <div class="interesse-card">
+                        <i class="fa-solid fa-car"> <span>Corridas de carro</span></i>
+                    </div>
+                    <div class="interesse-card">
+                        <i class="fa-duotone fa-solid fa-laptop"> <span>Tecnologias</span></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="habilidades" class="projecto">
+        <h2 class="projecto-titulo">Minhas Habilidades</h2>
+        <div class="skills-container-grid">
+
+            <div class="sobre-conteudo">
+                <h3 class="skills-categoria-titulo">A programar</h3>
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>HTML</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="barra-fundo">
+                        <div class="barra-progresso" style="width: 60%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>CSS</span>
+                        <span>55%</span>
+                    </div>
+                    <div class="barra-fundo">
+                        <div class="barra-progresso" style="width: 55%;"></div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="sobre-conteudo">
+                <h3 class="skills-categoria-titulo">Línguas</h3>
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>PORTUGUÊS</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="barra-fundo">
+                        <div class="barra-progresso" style="width: 95%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>INGLÊS</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="barra-fundo">
+                        <div class="barra-progresso" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
         </div>
     </section>
 
@@ -56,7 +139,7 @@
         <div class="projecto-caixa">
 
             <div class="projecto-card">
-                <img src="Google site Screenshot 2026-10-14 235527.png" alt="Projecto 1" class="projecto-imagem">
+                <img src="img/Google site Screenshot 2026-10-14 235527.png" alt="Projecto 1" class="projecto-imagem">
                 <div class="caixa-textos-projecto">
                     <h3 class="info-projecto">Site no Google Sites</h3>
                     <p class="paragrafo-projecto">Projecto feito no Google Sites</p>
@@ -64,7 +147,7 @@
             </div>
 
             <div class="projecto-card">
-                <img src="P2 Screenshot 2026-10-15 004023.png" alt="Projecto 1" class="projecto-imagem">
+                <img src="img/P2 Screenshot 2026-10-15 004023.png" alt="Projecto 2" class="projecto-imagem">
                 <div class="caixa-textos-projecto">
                     <h3 class="info-projecto">Formulário feito em HTML</h3>
                     <p class="paragrafo-projecto">Formulário com campos para serem preenchidos, desenvolvido apenas com
@@ -73,7 +156,6 @@
             </div>
 
         </div>
-
     </section>
 
     <section id="contactos" class="contactos">
@@ -92,9 +174,7 @@
                 </div>
             </div>
         </div>
-
     </section>
-
 </body>
 
 </html>
